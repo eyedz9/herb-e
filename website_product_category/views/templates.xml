@@ -9,15 +9,7 @@
 </template>
 
 <!-- Layout and common templates -->
-<!-- Product description -->
-<template id="product_description" inherit_id="website_sale.product" active="True" customize_show="True" name="Product description">
-	<xpath expr="//div[@class='js_product']" position="before">
-		<div class="text-info oe_subdescription" contenteditable="false">
-			<div itemprop="description" t-field="product.description"></div>
-		</div>
-	</xpath>
-</template>
-<!-- /Product description -->
+
 <template id="products_child_categories" inherit_id="website_sale.products" active="True" customize_show="True" name="Product Child Categories">
     <xpath expr="//div[@id='products_grid']/table" position="before">
         <table width="100%">
@@ -52,7 +44,15 @@
 
     </xpath>
 </template>
-
+<!-- Product description -->
+<template id="product_description" inherit_id="website_sale.product" active="True" customize_show="True" name="Product description">
+	<xpath expr="//div[@class='js_product']" position="before">
+		<div class="text-info oe_subdescription" contenteditable="false">
+			<div itemprop="description" t-field="product.description"></div>
+		</div>
+	</xpath>
+</template>
+<!-- /Product description -->
     <template id="subcategory_item" name="SubCategory item">
         <span itemscope="itemscope" itemtype="http://schema.org/SubCategory">
             <span class="oe_subcategory">
