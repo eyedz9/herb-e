@@ -2,6 +2,13 @@
 <openerp>
 <data>
 <!-- Product description -->
+<template id="products_description" inherit_id="website_sale.products_description">
+  <xpath expr="//div[@class='text-info oe_subdescription']" position="replace">
+      <div class="text-info oe_subdescription" contenteditable="false">
+        <div itemprop="description" t-field="product.description"></div>
+      </div>
+  </xpath>
+</template>
 <template id="product_description" inherit_id="website_sale.product" active="True" customize_show="True" name="Product description">
 	<xpath expr="//div[@class='js_product']" position="before">
 		<div class="text-info oe_subdescription" contenteditable="false">
@@ -129,7 +136,7 @@
         </xpath>
     </template>
 
-    <template id="products_description" inherit_id="website_sale.products_description">
+   <!--   <template id="products_description" inherit_id="website_sale.products_description">
   <xpath expr="//div[@class='text-info oe_subdescription']" position="replace">
       <div class="text-info oe_subdescription" contenteditable="false">
         <div itemprop="description" t-field="product.description"></div>
@@ -137,7 +144,7 @@
   </xpath>
 </template>
 
-        <!--<template id="product_description" inherit_id="website_sale.product" active="True" customize_show="True" name="Product description">
+      <template id="product_description" inherit_id="website_sale.product" active="True" customize_show="True" name="Product description">
   <xpath expr="//div[@class='js_product']" position="before">
       <div class="text-info oe_subdescription" contenteditable="false">
         <div itemprop="description" t-field="product.description"></div>
