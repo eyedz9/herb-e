@@ -16,7 +16,7 @@
  
 ##fixed parameters
 #odoo
-OE_USER="odoo"
+OE_USER="herb-e"
 OE_HOME="/$OE_USER"
 OE_HOME_EXT="/$OE_USER/${OE_USER}-server"
 #The default port where this Odoo instance will run under (provided you use the command -c in the terminal)
@@ -30,7 +30,7 @@ OE_VERSION="9.0"
 # Set this to True if you want to install Odoo 9 Enterprise!
 IS_ENTERPRISE="False"
 #set the superadmin password
-OE_SUPERADMIN="admin"
+OE_SUPERADMIN="Th3B3@tl35"
 OE_CONFIG="${OE_USER}-server"
 
 ##
